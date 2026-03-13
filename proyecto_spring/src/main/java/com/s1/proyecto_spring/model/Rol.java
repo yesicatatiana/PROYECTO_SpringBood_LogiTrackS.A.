@@ -15,7 +15,7 @@ public class Rol {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "ENUM('administrador','empleado')")
+    @Column(columnDefinition = "ENUM('ADMINISTRADOR','EMPLEADO')")
     private NombreRol nombre;
 
     public enum NombreRol {
