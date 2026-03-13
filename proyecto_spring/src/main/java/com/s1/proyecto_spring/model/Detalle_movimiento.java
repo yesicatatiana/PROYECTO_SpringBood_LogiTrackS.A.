@@ -26,8 +26,7 @@ public class Detalle_movimiento {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movimiento_id", nullable = false)
-    private Movimiento movimiento;
-
+    private Movimientos movimiento;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id", nullable = false)
     private Producto producto;

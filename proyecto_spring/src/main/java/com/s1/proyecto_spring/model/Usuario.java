@@ -27,13 +27,16 @@ public class Usuario {
     private String email;
 
     @Column(nullable = false, length = 255)
-    private String contrasena;
+    private String password;
 
     @Column(nullable = false)
     @Builder.Default
     private Boolean activo = true;
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @Builder.Default
-    private Set<UsuarioRol> usuarioRoles = new HashSet<>();
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "rol_id", nullable = false)
+    private Rol rol;
 }

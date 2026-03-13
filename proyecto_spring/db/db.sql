@@ -5,7 +5,7 @@ USE logitrack;
 
 CREATE TABLE rol (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre enum('ADMINITRADOR','EMPLEADO')
+    rol enum('ADMINITRADOR','EMPLEADO')
 );
 
 
@@ -14,18 +14,11 @@ CREATE TABLE usuario (
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL, 
-    contrasena VARCHAR(255) NOT NULL,   
-    activo BOOLEAN NOT NULL DEFAULT TRUE
-); 
-
-
-CREATE TABLE usuario_roles (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id BIGINT NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
     rol_id BIGINT NOT NULL,
-    FOREIGN KEY(usuario_id) REFERENCES usuario(id),
     FOREIGN KEY(rol_id) REFERENCES rol(id)
-);
+); 
 
 
 CREATE TABLE bodega (

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/proyecto_spring.iml" filepath="$PROJECT_DIR$/.idea/proyecto_spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PROYECTO_SpringBood_LogiTrackS.A..iml" filepath="$PROJECT_DIR$/.idea/PROYECTO_SpringBood_LogiTrackS.A..iml" />
+      <module fileurl="file://$PROJECT_DIR$/proyecto_spring/proyecto_spring.iml" filepath="$PROJECT_DIR$/proyecto_spring/proyecto_spring.iml" />
     </modules>
   </component>
 </project>

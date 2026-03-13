@@ -13,14 +13,14 @@ import java.time.LocalDate;
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
 
-public class movimientos {
+public class Movimientos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "ENUM('ENTRADA','SALIDA','TRANSFERENCIA')")
-    private movimientos nombre;
+    private Movimientos tipo;
 
     @Column(nullable = false)
     private LocalDate fecha;
@@ -28,7 +28,7 @@ public class movimientos {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "ENUM('PENDIENTE','COMPLETADO','ANULADO')")
-    private movimientos estado;
+    private Movimientos estado;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -50,5 +50,4 @@ public class movimientos {
     public enum EstadoMovimiento {
         PENDIENTE, COMPLETADO, ANULADO
     }
-
 }
