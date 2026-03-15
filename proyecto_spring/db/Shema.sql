@@ -5,7 +5,7 @@ USE logitrack;
 
 CREATE TABLE rol (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    rol enum('ADMINITRADOR','EMPLEADO')
+    rol enum('ADMINISTRADOR','EMPLEADO')
 );
 
 
