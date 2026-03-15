@@ -31,7 +31,7 @@ public record UsuarioRequestDTO(
         String password,
 
         @NotEmpty(message = "Debe asignar al menos un rol")
-        List<Long> rolesIds
+        Long rolesId
 
 ) {
 }
