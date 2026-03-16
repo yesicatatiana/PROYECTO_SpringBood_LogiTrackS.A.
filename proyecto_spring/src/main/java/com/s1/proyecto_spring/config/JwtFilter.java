@@ -1,11 +1,13 @@
-package com.s1.proyecto1.config;
+package com.s1.proyecto_spring.config;
+
+
 
 import jakarta.servlet.*;
-import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -13,6 +15,10 @@ import java.util.Collections;
 @Component// Le digo a Spring que este filtro es un componente manejado por el contenedor
 @RequiredArgsConstructor
 public class JwtFilter extends GenericFilter {
+    /*
+     * Inyecto mi JwtService.
+     * Este servicio es el que sabe validar el token.
+     */
     private final JwtService jwtService;
 
     /*
